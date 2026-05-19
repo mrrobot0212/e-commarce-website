@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SS Bond Shop</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="bg-black text-white p-4 flex justify-between items-center">
+<h1 class="text-xl font-bold">SS Bond</h1>
+<button onclick="toggleMenu()" class="md:hidden text-3xl">☰</button>
+<div class="hidden md:flex gap-6">
+<a href="index.html">Shop</a>
+<a href="cart.html">Cart</a>
+<a href="admin.html">Admin</a>
+</div>
+</nav>
+
+<div id="mobileMenu" class="hidden bg-black text-white p-4 flex flex-col gap-3 md:hidden">
+<a href="index.html">Shop</a>
+<a href="cart.html">Cart</a>
+<a href="admin.html">Admin</a>
+</div>
+
+<!-- HERO -->
+<section class="bg-gradient-to-r from-purple-600 to-pink-500 text-white text-center p-8">
+<h2 class="text-3xl md:text-5xl font-bold">SS Bond Store</h2>
+<p>Best Fashion Products in Bangladesh</p>
+</section>
+
+<!-- PRODUCTS -->
+<div id="products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-10"></div>
+
+<!-- STICKY CART BUTTON (PHONE) -->
+<a href="cart.html" class="fixed bottom-0 left-0 w-full bg-green-500 text-white text-center py-4 text-xl md:hidden">
+View Cart 🛒
+</a>
+
+<script>
+function toggleMenu(){document.getElementById("mobileMenu").classList.toggle("hidden")}
+</script>
+<script src="js/products.js"></script>
+</body>
+</html>
